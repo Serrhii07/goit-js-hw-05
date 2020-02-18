@@ -12,11 +12,9 @@ class Storage {
   }
 
   removeItem(item) {
-    for (const key of this.items) {
-      if (key === item) {
-        const itemIndex = this.items.indexOf(key);
-        this.items.splice(itemIndex, 1);
-      }
+    if (this.items.includes(item)) {
+      const itemIndex = this.items.indexOf(item);
+      this.items.splice(itemIndex, 1);
     }
   }
 }
